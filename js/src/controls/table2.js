@@ -44,8 +44,7 @@ const rowsData = [
 const Plots = (props) => {
     //const { field, getValue, instanceId, onChange, parentBlockProps, rowIndex } = props;
 
-    const rows = rowsData
-    const cols = colData
+    const { rows, cols } = props.data
 
 
     return (

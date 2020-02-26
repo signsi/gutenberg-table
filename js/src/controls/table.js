@@ -71,10 +71,9 @@ const getNewData = (rows, cols) => {
 
 const TableControl = (props) => {
     //const { field, getValue, instanceId, onChange, parentBlockProps, rowIndex } = props;
-    const initialValue = {
-        rows: rowsData,
-        cols: colData
-    }
+    const { onChange } = props;
+    const initialValue = props.data
+    console.log("initialvalue: ", props)
 
     const [rows, setRows] = initialValue.rows ? useState(initialValue.rows) : useState(rowsData)
     const [cols, setCols] = initialValue.cols ? useState(initialValue.cols) : useState(colData)
@@ -86,7 +85,7 @@ const TableControl = (props) => {
         }
         setRows(newRows)
         const newData = getNewData(newRows, cols)
-        //onChange(newData)
+        onChange(newData)
     }
 
     const addNewCol = () => {
@@ -100,7 +99,7 @@ const TableControl = (props) => {
         const updatedRows = getUpdatedRows(rows, newIndex)
         setRows(updatedRows)
         const newData = getNewData(updatedRows, updatedCols)
-        //onChange(newData)
+        onChange(newData)
     }
 
     const style = {
