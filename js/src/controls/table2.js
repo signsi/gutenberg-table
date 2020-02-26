@@ -4,6 +4,7 @@
 import { __ } from '@wordpress/i18n';
 import React from "react";
 import BasicPlot from '../components/BasicPlot';
+import TableEditor from '../components/TableEditor';
 
 /**
  * Internal dependencies
@@ -49,6 +50,9 @@ const Plots = (props) => {
 
     return (
         <div className={"root"}>
+            <div style={{ width: "500px" }}>
+                <TableEditor rows={rows} columns={cols} />
+            </div>
             <div className={"plots"}>
                 <BasicPlot row={rows[0]} columns={cols} />
                 <BasicPlot row={rows[1]} columns={cols} />

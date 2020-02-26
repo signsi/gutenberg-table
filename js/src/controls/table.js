@@ -73,7 +73,6 @@ const TableControl = (props) => {
     //const { field, getValue, instanceId, onChange, parentBlockProps, rowIndex } = props;
     const { onChange } = props;
     const initialValue = props.data
-    console.log("initialvalue: ", props)
 
     const [rows, setRows] = initialValue.rows ? useState(initialValue.rows) : useState(rowsData)
     const [cols, setCols] = initialValue.cols ? useState(initialValue.cols) : useState(colData)

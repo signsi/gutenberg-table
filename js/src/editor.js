@@ -52,10 +52,7 @@ registerBlockType('gutenberg-examples/example-01-basic-esnext', {
 	attributes: {
 		data: {
 			type: 'object',
-			default: initData,
-			query: {
-
-			}
+			default: initData
 		},
 	},
 	edit(props) {
@@ -72,6 +69,8 @@ registerBlockType('gutenberg-examples/example-01-basic-esnext', {
 	save(props) {
 		return (
 			<div className={"plots"}>
+				<h1>Rendering</h1>
+				<Plots data={props.attributes.data} style={{ position: "relative" }} />
 			</div>
 		);
 	},
