@@ -40,5 +40,17 @@
     "@wordpress/scripts": "7.0.1",
     "npm-run-all": "4.1.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@material-ui/core": "^4.9.4",
+    "@wordpress/blocks": "^6.12.0",
+    "@wordpress/element": "^2.11.0",
+    "@wordpress/i18n": "^3.9.0",
+    "bootstrap": "^4.4.1",
+    "classnames": "^2.2.6",
+    "immutable": "^4.0.0-rc.12",
+    "react": "^16.12.0",
+    "react-bootstrap": "0.32.4",
+    "react-data-grid": "5.0.1",
+    "react-vis": "^1.11.7"
+  }
 }
