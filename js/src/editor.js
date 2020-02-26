@@ -2,6 +2,7 @@
 
 import { registerBlockType } from '@wordpress/blocks';
 import TableControl from './controls/table';
+import Plots from './controls/table2';
 
 const blockStyle = {
 	backgroundColor: '#900',
@@ -10,8 +11,8 @@ const blockStyle = {
 };
 
 registerBlockType('gutenberg-examples/example-01-basic-esnext', {
-	title: 'Example: Basic (esnext)',
-	icon: 'universal-access-alt',
+	title: 'Graph #1',
+	icon: 'chart-line',
 	category: 'layout',
 	example: {},
 	edit() {
@@ -22,7 +23,11 @@ registerBlockType('gutenberg-examples/example-01-basic-esnext', {
 		);
 	},
 	save() {
-		return <div style={blockStyle}>Hello World, step 1 (from the frontend).</div>;
+		return (
+			<div className={"plots"}>
+				<Plots style={{ position: "relative" }} />
+			</div>
+		);
 	},
 });
 

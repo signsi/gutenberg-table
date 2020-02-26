@@ -31,3 +31,7 @@ add_action('admin_enqueue_scripts', function () {
 	wp_enqueue_style('admin_block_width', plugin_dir_url(__FILE__) . 'css/admin.css', false, '1.0.0');
 	//wp_enqueue_script('google-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 });
+
+add_action('wp_enqueue_scripts', function () {
+	wp_enqueue_style('admin_block_width', plugin_dir_url(__FILE__) . 'css/admin.css', false, '1.0.0');
+});
